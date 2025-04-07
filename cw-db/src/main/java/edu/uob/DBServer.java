@@ -25,9 +25,6 @@ public class DBServer {
         server.blockingListenOn(8888);
     }
 
-    /**
-    * KEEP this signature otherwise we won't be able to mark your submission correctly.
-    */
     public DBServer() {
         storageFolderPath = Paths.get("databases").toAbsolutePath().toString();
         try {
@@ -38,12 +35,6 @@ public class DBServer {
         }
     }
 
-    /**
-    * KEEP this signature (i.e. {@code edu.uob.DBServer.handleCommand(String)}) otherwise we won't be
-    * able to mark your submission correctly.
-    *
-    * <p>This method handles all incoming DB commands and carries out the required actions.
-    */
     public String handleCommand(String command) {
         // TODO implement your server logic here
         if(command == null)  return "[ERROR]: Empty command";
